@@ -1,0 +1,1091 @@
+@import url("/system/files/slick.css");
+@import url("/system/files/slick-theme.css");
+
+@import url("/system/files/fontawesome.css");
+
+/*!
+ * Font Awesome Free 5.0.8 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/system/files/fa-regular-400.eot");
+  src: url("/system/files/fa-regular-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("/system/files/fa-regular-400.woff2") format("woff2"),
+    url("/system/files/fa-regular-400.woff") format("woff"),
+    url("/system/files/fa-regular-400.ttf") format("truetype"),
+    url("/system/files/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.0.8 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/system/files/fa-solid-900.eot");
+  src: url("/system/files/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+    url("/system/files/fa-solid-900.woff2") format("woff2"),
+    url("/system/files/fa-solid-900.woff") format("woff"),
+    url("/system/files/fa-solid-900.ttf") format("truetype"),
+    url("/system/files/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+body .main-container img {
+  max-width: none !important;
+  height: none !important;
+}
+
+.inner-container {
+  height: 100%;
+  padding: 0 !important;
+}
+
+/**
+ * navigation section
+*/
+#navigation-block {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
+  z-index: 99999999;
+}
+
+#nav-title-container {
+  position: absolute;
+  left: 50px;
+  top: 26px;
+}
+
+#nav-title-container h1.slide-title {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+/** cluster filters **/
+#clusters {
+  position: absolute;
+  top: 25px;
+  right: 300px;
+  z-index: 5;
+}
+
+#segments {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  z-index: 5;
+}
+
+#clusters #cluster-filter,
+#segments #segments-filter {
+  width: 200px;
+  height: 30px;
+  /* font-size: 14px; */
+}
+
+#clusters #cluster-filter:focus,
+#segments #segments-filter:focus {
+  border-color: rgb(160, 7, 43);
+  outline: 0;
+}
+
+#marriott-logo-container {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+/* 
+  Regions containers
+*/
+.block-map h1.title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.block-map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#map-container-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1360px;
+}
+
+#london-block {
+  background: peru;
+  overflow: hidden;
+}
+
+#centralLondon-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+  overflow: hidden;
+}
+
+#northEngland-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+}
+
+#centralEngland-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+}
+
+#southEngland-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+}
+
+#scotland-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1738px;
+}
+
+#ireland-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+}
+
+#countryClub-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 1366px;
+}
+
+/* 
+  Back buttons for london maps
+*/
+.back {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: #ffff;
+  padding: 8px 13px;
+  color: #000;
+  z-index: 999;
+}
+
+/* 
+  Pins
+*/
+.pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  top: 15%;
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 34px;
+  color: rgb(160, 7, 43);
+}
+
+.material-icons:after {
+  content: "";
+  width: 12px;
+  height: 11px;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.pin #pin-icon {
+  width: 25px;
+}
+
+.hotel-count {
+  /* Hotel count on pins */
+  position: absolute;
+  color: #53565a;
+  font-size: 8px;
+  left: 15px;
+  top: 8px;
+  z-index: 999;
+  font-weight: 600;
+}
+
+.city-label {
+  /* Hotel labels under pins */
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/* 
+  Tool tip for London pins
+*/
+#london-block .pin .tooltip,
+#centralLondon-block .pin .tooltip {
+  position: absolute;
+  left: 40px;
+  top: -27px;
+  width: 245px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.25;
+  border-radius: 5px;
+  color: #53565a;
+  background-color: rgba(255, 255, 255, 0.9);
+  visibility: hidden; /* no hover events */
+  z-index: 1; /* in front of pins */
+  pointer-events: none; /* ensure label hides when pin no longer "hovered" */
+  opacity: 0; /* hiding whilst placing */
+  transition: opacity 500ms ease;
+}
+
+#london-block .pin:hover .tooltip,
+#centralLondon-block .pin:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
+/* 
+  POP UP
+*/
+div#popup-container {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.popup-wrapper {
+  position: relative;
+  width: 670px;
+  max-height: 627px;
+  background: white;
+  margin: 95px auto;
+  border-radius: 3px;
+}
+
+.popup-inner {
+  height: 605px;
+}
+
+div#popup-data {
+  width: 561px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+div#popup-data a {
+  color: #c00d0d;
+}
+
+#close-popup {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  color: #777;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+#close-popup:hover {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.toggled {
+  display: block !important;
+} /* for popup to fadeIn*/
+
+.cf::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* 
+  Slick Slider
+*/
+.slick-list.draggable {
+  width: 560px;
+  height: 505px;
+  margin: 0 auto;
+}
+
+.slick-list {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide {
+  height: 100%;
+  position: relative;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: block;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 99;
+  background: radial-gradient(rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+  color: rgb(160, 7, 43);
+}
+
+.controls.prev-button {
+  left: -75px;
+}
+
+.controls.next-button {
+  right: -75px;
+}
+
+#pagination {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  line-height: 100px;
+  text-align: center;
+  background: radial-gradient(rgba(0, 0, 0, 0.1) 0%, transparent 38%);
+  z-index: 1;
+  color: rgb(160, 7, 43);
+  font-size: 14px;
+}
+
+/* 
+  Popup Data
+*/
+.hotel-block {
+}
+
+.hotel-block .image {
+  width: 561px;
+  height: 260px;
+}
+
+.hotel-block .image img {
+  width: 561px;
+  height: 260px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hotel-block .info {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.hotel-block .info .title {
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  border-left: 6px solid rgb(160, 7, 43);
+  padding-left: 15px;
+}
+
+.hotel-block .info .stars {
+  margin-bottom: 10px;
+  color: rgb(160, 7, 43);
+}
+
+.hotel-block .info .address,
+.hotel-block .info .contactInfo {
+  font-family: "Montserrat-Light", sans-serif;
+  font-size: 15px;
+}
+
+/**
+ * More info box
+ */
+.more-info {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(160, 7, 43);
+}
+
+.more-info .label {
+  color: rgb(160, 7, 43);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.more-info .value {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+.more-info .row {
+  width: 100%;
+  font-size: 13px;
+}
+
+.row.margin-top {
+  margin-top: 10px;
+}
+
+.more-info .row::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.more-info .col {
+  float: left;
+}
+
+.col-6 {
+  width: 48%;
+  margin-right: 2%;
+}
+
+.col-12 {
+  width: 96%;
+}
+
+.col-6 .label {
+  width: 75%;
+}
+
+.col-6 .value {
+  width: 25%;
+}
+
+.col-12 .label {
+  width: 37.5%;
+}
+
+.col-12 .value {
+  width: 62.5%;
+}
+
+/* ========================================
+  Fixing pins on global map
+=========================================== */
+#main-belfast-pin {
+  top: 324px;
+  left: 576px;
+}
+
+#main-dublin-pin {
+  top: 437px;
+  left: 560px;
+}
+
+#main-athlone-pin {
+  top: 400px;
+  left: 479px;
+}
+
+#main-ireland-pin {
+  top: 483px;
+  left: 552px;
+}
+
+#main-glasgow-pin {
+  top: 217px;
+  left: 643px;
+}
+
+#main-edinburg-pin {
+  top: 223px;
+  left: 715px;
+}
+
+#main-aberdeen-pin {
+  top: 111px;
+  left: 753px;
+}
+
+#main-leeds-pin {
+  top: 400px;
+  right: 503px;
+}
+
+#main-liverpool-pin {
+  top: 431px;
+  right: 596px;
+}
+
+#main-preston-pin {
+  top: 386px;
+  left: 726px;
+}
+
+#main-manchester-pin {
+  top: 413px;
+  left: 756px;
+}
+
+#main-york-pin {
+  top: 359px;
+  right: 491px;
+}
+
+#main-durham-pin {
+  top: 332px;
+  right: 518px;
+}
+
+#main-newcastle-pin {
+  top: 291px;
+  right: 533px;
+}
+
+#main-birmingham-pin {
+  left: 735px;
+  top: 520px;
+}
+
+#main-cheltenham-pin {
+  top: 563px;
+  left: 739px;
+}
+
+#main-cambridge-pin {
+  top: 511px;
+  right: 438px;
+}
+
+#main-huntingdon-pin {
+  top: 494px;
+  right: 476px;
+}
+
+#main-leicester-pin {
+  top: 494px;
+  left: 756px;
+}
+
+#main-meriden-pin {
+  top: 531px;
+  left: 758px;
+}
+
+#main-milton-keynes-pin {
+  top: 567px;
+  right: 451px;
+}
+
+#main-nottingham-pin {
+  top: 460px;
+  right: 521px;
+}
+
+#main-northampton-pin {
+  top: 541px;
+  right: 496px;
+}
+
+#main-oxford-pin {
+  top: 600px;
+  right: 504px;
+}
+
+#main-peterborough-pin {
+  top: 465px;
+  right: 471px;
+}
+
+#main-bournemouth-pin {
+  top: 665px;
+  right: 554px;
+}
+
+#main-bristol-pin {
+  top: 623px;
+  right: 611px;
+}
+
+#main-cardiff-pin {
+  top: 591px;
+  left: 687px;
+}
+
+#main-maidstone-pin {
+  top: 614px;
+  right: 417px;
+}
+
+#main-monmouthshire-pin {
+  top: 587px;
+  right: 618px;
+}
+
+#main-lingfield-pin {
+  top: 640px;
+  right: 446px;
+}
+
+#main-portsmouth-pin {
+  top: 651px;
+  right: 489px;
+}
+
+#main-swansea-pin {
+  top: 575px;
+  right: 698px;
+}
+
+#main-swindon-pin {
+  top: 610px;
+  right: 558px;
+}
+
+#main-london-map-pin {
+  top: 594px;
+  right: 458px;
+}
+
+#main-derby-pin {
+  top: 460px;
+  right: 550px;
+}
+
+/* 
+  North England region pins
+*/
+#region-durham-pin {
+  top: 230px;
+  right: 525px;
+}
+
+#region-leeds-pin {
+  top: 481px;
+  right: 520px;
+}
+
+#region-liverpool-pin {
+  top: 585px;
+  right: 766px;
+}
+
+#region-preston-pin {
+  top: 483px;
+  left: 573px;
+}
+
+#region-manchester-pin {
+  top: 529px;
+  left: 607px;
+}
+
+#region-newcastle-pin {
+  top: 171px;
+  right: 539px;
+}
+
+#region-york-pin {
+  top: 432px;
+  right: 458px;
+}
+
+/* 
+  Central england fix pins o map
+*/
+#region-birmingham-pin {
+  top: 328px;
+  left: 573px;
+}
+
+#region-cheltenham-pin {
+  top: 484px;
+  left: 519px;
+}
+
+#region-cambridge-pin {
+  top: 413px;
+  right: 379px;
+}
+
+#region-derby-pin {
+  top: 202px;
+  left: 632px;
+}
+
+#region-huntingdon-pin {
+  top: 343px;
+  right: 443px;
+}
+
+#region-leicester-pin {
+  top: 300px;
+  left: 695px;
+}
+
+#region-meriden-pin {
+  top: 350px;
+  left: 643px;
+}
+
+#region-milton-keynes-pin {
+  top: 456px;
+  right: 529px;
+}
+
+#region-nottingham-pin {
+  top: 192px;
+  right: 625px;
+}
+
+#region-northampton-pin {
+  top: 396px;
+  right: 561px;
+}
+
+#region-oxford-pin {
+  top: 528px;
+  right: 629px;
+}
+
+#region-peterborough-pin {
+  top: 240px;
+  right: 486px;
+}
+
+/* 
+  South England fix the pins o map
+*/
+#region-bournemouth-pin {
+  top: 500px;
+  left: 594px;
+}
+
+#region-bristol-pin {
+  top: 280px;
+  left: 524px;
+}
+
+#region-cardiff-pin {
+  top: 289px;
+  left: 430px;
+}
+
+#region-maidstone-pin {
+  top: 345px;
+  right: 308px;
+}
+
+#region-monmouthshire-pin {
+  top: 256px;
+  left: 499px;
+}
+
+#region-lingfield-pin {
+  top: 384px;
+  right: 381px;
+}
+
+#region-portsmouth-pin {
+  top: 458px;
+  right: 524px;
+}
+
+#region-swansea-pin {
+  top: 248px;
+  left: 273px;
+}
+
+#region-swindon-pin {
+  top: 270px;
+  left: 618px;
+}
+
+/* ========================================
+  Fixing hotels count inside the pins on global map
+=========================================== */
+#main-dublin-pin .hotel-count {
+  top: 9px;
+  left: 15px;
+}
+
+#main-glasgow-pin .hotel-count {
+  top: 9px;
+  left: 20px;
+}
+
+#main-edinburg-pin .hotel-count {
+  top: 9px;
+  left: 22px;
+}
+
+#main-aberdeen-pin .hotel-count {
+  top: 9px;
+  left: 24px;
+}
+
+#main-liverpool-pin .hotel-count {
+  top: 9px;
+  left: 22px;
+}
+
+#main-manchester-pin .hotel-count {
+  top: 9px;
+  left: 30px;
+}
+
+#main-birmingham-pin .hotel-count {
+  top: 9px;
+  left: 15px;
+}
+
+#main-oxford-pin .hotel-count {
+  left: 17px;
+  top: 9px;
+}
+
+#main-bristol-pin .hotel-count {
+  left: 15px;
+  top: 8px;
+}
+
+#main-london-map-pin .hotel-count {
+  left: 14.5px;
+  top: 9px;
+}
+
+#main-swindon-pin .hotel-count {
+  left: 20px;
+}
+
+/* 
+  North England region count hotels
+*/
+#region-liverpool-pin .hotel-count {
+  left: 22px;
+}
+
+#region-manchester-pin .hotel-count {
+  left: 29px;
+}
+
+/* 
+  Central england fix hotel count on the pins
+*/
+#region-birmingham-pin .hotel-count {
+  left: 30px;
+}
+
+#region-oxford-pin .hotel-count {
+  left: 16px;
+}
+
+/* ========================================
+  Fixing hotels labels on right side of the pin on global map
+=========================================== */
+#main-dublin-pin .city-label {
+  position: absolute;
+  left: 42px;
+  top: 6px;
+}
+
+#main-preston-pin .city-label {
+  position: absolute;
+  left: -44px;
+  top: 10px;
+}
+
+#main-york-pin .city-label {
+  position: absolute;
+  right: -23px;
+  top: 10px;
+}
+
+#main-durham-pin .city-label {
+  position: absolute;
+  top: 4px;
+  right: -47px;
+}
+
+#main-newcastle-pin .city-label {
+  position: absolute;
+  top: 6px;
+  right: -61px;
+}
+
+#main-birmingham-pin .city-label {
+  position: absolute;
+  left: -60px;
+  top: 10px;
+}
+
+#main-cheltenham-pin .city-label {
+  position: absolute;
+  left: -60px;
+  top: 12px;
+}
+
+#main-huntingdon-pin .city-label {
+  position: absolute;
+  top: 5px;
+  right: -57px;
+}
+
+#main-leicester-pin .city-label {
+  position: absolute;
+  top: 5px;
+  right: -43px;
+}
+
+#main-meriden-pin .city-label {
+  position: absolute;
+  top: 5px;
+  right: -41px;
+}
+
+#main-milton-keynes-pin .city-label {
+  position: absolute;
+  right: -72px;
+  top: 5px;
+}
+
+#main-nottingham-pin .city-label {
+  position: absolute;
+  top: -6px;
+  right: -59px;
+}
+
+#main-northampton-pin .city-label {
+  position: absolute;
+  top: 32px;
+  left: -47px;
+}
+
+#main-peterborough-pin .city-label {
+  position: absolute;
+  right: -68px;
+  top: 9px;
+}
+
+#main-maidstone-pin .city-label {
+  position: absolute;
+  top: 6px;
+  right: -52px;
+}
+
+#main-monmouthshire-pin .city-label {
+  position: absolute;
+  top: 9px;
+  right: -80px;
+}
+
+#main-lingfield-pin .city-label {
+  position: absolute;
+  top: 12px;
+  right: -42px;
+}
+
+#main-derby-pin .city-label {
+  position: absolute;
+  bottom: 2px;
+  left: -25px;
+}
+
+/* 
+  Fixing city label on left/right side of pin for south england map
+*/
+#region-monmouthshire-pin .city-label {
+  position: absolute;
+  top: 3px;
+  right: -83px;
+}

@@ -1,0 +1,2258 @@
+<div class="inner-container">
+  <!-- start Filters -->
+  <nav id="navigation-block">
+    <div id="nav-title-container">
+      <h1 class="slide-title">Marriott UK hotels</h1>
+    </div>
+
+    <div id="clusters">
+      <select id="cluster-filter">
+        <option selected="selected" value="map-container">All Regions</option>
+        <option value="london">Heathrow & Greater London</option>
+        <option value="centralLondon">Central London</option>
+        <option value="northEngland">North England</option>
+        <option value="centralEngland">Central England</option>
+        <option value="southEngland">South England & Wales</option>
+        <option value="scotland">Scotland</option>
+        <option value="ireland">Ireland</option>
+        <option value="countryClub">Country Club</option>
+      </select>
+    </div>
+
+    <div id="segments">
+      <select id="segments-filter">
+        <option selected="selected" value="all">All Segments</option>
+        <option value="golf">Golf</option>
+        <option value="wedding">Weddings</option>
+        <option value="small-meetings">Small Meetings & Events</option>
+        <option value="large-meetings">Large Meetings & Events</option>
+      </select>
+    </div>
+  </nav>
+  <!-- end Filters -->
+
+  <!-- main Map -->
+  <div id="map-container-block" class="block-map">
+    <img src="/system/files/uk-ireland.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Greater London Map -->
+  <div id="london-block" class="block-map">
+    <h1 class="title">Heathrow & Greater London</h1>
+    <a id="back-main__map" href="#" class="back">Back</a>
+    <!-- <img src="" alt=""> Map image -->
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Central London Map -->
+  <div id="centralLondon-block" class="block-map">
+    <h1 class="title">Central London</h1>
+    <a id="back-greaterLondon__map" href="#" class="back">Back</a>
+    <img src="/system/files/central-london.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- North England Map -->
+  <div id="northEngland-block" class="block-map">
+    <img src="/system/files/northern-england.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Central England Map -->
+  <div id="centralEngland-block" class="block-map">
+    <img src="/system/files/central-england.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- South England Map -->
+  <div id="southEngland-block" class="block-map">
+    <img src="/system/files/southern-england.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Scotland Map -->
+  <div id="scotland-block" class="block-map">
+    <img src="/system/files/scotland.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Ireland Map -->
+  <div id="ireland-block" class="block-map">
+    <img src="/system/files/ireland-northern-ireland.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- Country Club Map -->
+  <div id="countryClub-block" class="block-map">
+    <img src="/system/files/uk-ireland.svg" alt="" />
+    <div class="map-data"></div>
+  </div>
+
+  <!-- start Popup -->
+  <div id="popup-container">
+    <div class="popup-wrapper">
+      <span id="pagination"></span>
+      <a href="#" id="close-popup">X</a>
+      <div class="popup-inner">
+        <div id="popup-data"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end Popup -->
+</div>
+<!-- Inner container -->
+
+<script>
+  window.northEnglandData = {
+    durham: [
+      {
+        title: "DURHAM MARRIOTT HOTEL",
+        stars: 4,
+        address: "Old Elvet, Durham City, England DH1 3JN",
+        contactInfo:
+          '+(0)191 386 6821 | <a href="app://openExternal/?link=http://durhammarriottroyalcounty.co.uk" target="_blank">www.durhammarriottroyalcounty.co.uk</a>',
+        image: "/system/files/durham.jpg",
+        bedrooms: "149",
+        suites: "1",
+        meetings: "5",
+        delegates: "120",
+        airport: "Newcastle (24 miles)",
+        station: "Durham (0.5 miles)",
+        brand: "marriot",
+        segment: "wedding small-meetings"
+      }
+    ], //1
+
+    leeds: [
+      {
+        title: "LEEDS MARRIOTT HOTEL",
+        stars: 4,
+        address: "4 Trevelyan Square, Boar Lane, Leeds LS1 6ET",
+        contactInfo:
+          '+44 (0)113 236 6366 | <a href="app://openExternal/?link=http://www.leedsmarriott.co.uk" target="_blank">www.leedsmarriott.co.uk</a>',
+        image: "/system/files/leeds.jpg",
+        bedrooms: "236",
+        suites: "8",
+        meetings: "17",
+        delegates: "304",
+        airport: "Leeds Bradford (11 miles)",
+        station: "Leeds (0.4 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    liverpool: [
+      {
+        title: "LIVERPOOL MARRIOTT HOTEL",
+        stars: 4,
+        address: "One Queen Square, Liverpool, L1 1RH",
+        contactInfo:
+          '+44 (0)151 476 8000 | <a href="app://openExternal/?link=http://liverpoolmarriott.co.uk" target="_blank">www.liverpoolmarriott.co.uk</a>',
+        image: "/system/files/liverpool_561x260.jpg",
+        bedrooms: "143",
+        suites: "3",
+        meetings: "7",
+        delegates: "300",
+        airport: "Liverpool John Lennon (9 miles)",
+        station: "Liverpool Lime Street (0.4 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "Aloft Liverpool",
+        stars: 1,
+        address: "No. 1 N John Street, Liverpool L2 5QW",
+        contactInfo:
+          '+44 (0)151 294 3970 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Aloft",
+        segment: " "
+      }
+    ], //2
+
+    preston: [
+      {
+        title: "PRESTON MARRIOTT HOTEL",
+        stars: 4,
+        address: "Garstang Road, Broughton, Preston PR3 5JB",
+        contactInfo:
+          '+44 (0)1772 864087 | <a href="app://openExternal/?link=http://prestonmarriott.co.uk" target="_blank">www.prestonmarriott.co.uk</a>',
+        image: "/system/files/preston.jpg",
+        bedrooms: "145",
+        suites: "4",
+        meetings: "12",
+        delegates: "220",
+        airport: "Manchester (42 miles)",
+        station: "Preston (3.8 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      }
+    ], //1
+
+    manchester: [
+      {
+        title: "MANCHESTER AIRPORT MARRIOTT HOTEL",
+        stars: 4,
+        address: "Hale Road, Hale Barns, Altrincham WA15 8XW",
+        contactInfo:
+          '+44 (0)161 904 0301 | <a href="app://openExternal/?link=http://manchesterairportmarriott.co.uk" target="_blank">www.manchesterairportmarriott.co.uk</a>',
+        image: "/system/files/manchester-airport.jpg",
+        bedrooms: "207",
+        suites: "8",
+        meetings: "12",
+        delegates: "160",
+        airport: "Manchester (1.9 miles)",
+        station: "Manchester Airport (1 mile)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "RENAISSANCE MANCHESTER CITY CENTRE HOTEL",
+        stars: 4,
+        address: "Blackfriars Street, Manchester M3 2EQ",
+        contactInfo:
+          '+44 (0)161 831 6000 | <a href="app://openExternal/?link=http://renaissancemanchester.co.uk" target="_blank">www.renaissancemanchester.co.uk</a>',
+        image: "/system/files/renaissance-manchester.jpg",
+        bedrooms: "199",
+        suites: "4",
+        meetings: "9",
+        delegates: "400",
+        airport: "Manchester (9 miles)",
+        station:
+          "Manchester Victoria (1 mile), Manchester Piccadilly (3 miles)",
+        brand: "Renaissance",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "AC Hotel Manchester Salford Quays",
+        stars: 1,
+        address: "17-19 Trafford Road, Manchester, Lancashire M5 3AW",
+        contactInfo:
+          '+44 (0)161 876 5305 | <a href="app://openExternal/?link=#" target="_blank">xxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "142",
+        suites: "N/A",
+        meetings: "4",
+        delegates: "100",
+        airport: "Manchester Airport 9.1 miles",
+        station: "Manchester Piccadillly 3.5 miles, Salford Central 2.5 miles",
+        brand: "AC Hotels",
+        segment: " "
+      },
+      {
+        title: "AC Hotel Manchester City Centre",
+        stars: 1,
+        address: "15 Mason St, Manchester, Lancashire M4 5FT",
+        contactInfo:
+          '+44 (0)161 509 4979 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "172",
+        suites: "N/A",
+        meetings: "2",
+        delegates: "120",
+        airport: "Manchester Airport 6.5 miles",
+        station:
+          "Manchester Piccadillly 0.7 miles, Manchester Victoria 0.5 miles",
+        brand: "AC Hotel",
+        segment: " "
+      },
+      {
+        title: "Manchester Marriott Victoria & Albert Hotel",
+        stars: 1,
+        address: "Water Street, Manchester M3 4JQ",
+        contactInfo:
+          '+44 (0)161 832 1188 | <a href="app://openExternal/?link=#" target="_blank">xxxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "147",
+        suites: "N/A",
+        meetings: "9",
+        delegates: "240",
+        airport: "Manchester Airport 9 miles",
+        station: "Manchester  Victoria 1 mile, Piccadilly Station 2 miles",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "Hotel Football, Old Trafford, a Tribute Portfolio Hotel",
+        stars: 1,
+        address: "Old Trafford, 99 Sir Matt Busby Way, Manchester M16 0SZ",
+        contactInfo:
+          '+44 (0)161 751 0430 | <a href="app://openExternal/?link=#" target="_blank">xxxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "133",
+        suites: "N/A",
+        meetings: "5",
+        delegates: "300",
+        airport: "Manchester Airport 9 .6miles",
+        station:
+          "Manchester Oxford Station 3.1 miles, Manchester Piccadilly Station 4.2 miles",
+        brand: "Tribute Portfolio",
+        segment: " "
+      },
+      {
+        title: "WORSLEY PARK MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Walkden Road, Worsley, Manchester, M28 2QT",
+        contactInfo:
+          '+44 (0)0161 975 2000 | <a href="app://openExternal/?link=http://marriottworsleypark.co.uk/" target="_blank">www.marriottworsleypark.co.uk</a>',
+        image: "/system/files/worsley-park.jpg",
+        bedrooms: "158",
+        suites: "5",
+        meetings: "9",
+        delegates: "250",
+        airport: "Manchester International (12.7 miles)",
+        station: "Manchester Picadilly (8 miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //6
+
+    newcastle: [
+      {
+        title: "NEWCASTLE GATESHEAD MARRIOTT HOTEL METROCENTRE",
+        stars: 4,
+        address: "MetroCentre, Gateshead, Tyne & Wear, England NE11 9XF",
+        contactInfo:
+          '+44 (0)191 493 2233 | <a href="app://openExternal/?link=http://newcastlemarriottmetrocentre.co.uk" target="_blank">www.newcastlemarriottmetrocentre.co.uk</a>',
+        image: "/system/files/newcastle-gateshead.jpg",
+        bedrooms: "150",
+        suites: "n/a",
+        meetings: "9",
+        delegates: "400",
+        airport: "Newcastle International (8 miles)",
+        station: "MetroCentre (0.1miles), Newcastle Central (4 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    york: [
+      {
+        title: "YORK MARRIOTT HOTEL",
+        stars: 4,
+        address: "Tadcaster Road, York, Yorkshire YO24 1QQ",
+        contactInfo:
+          '+44 (0)1904 701000 | <a href="app://openExternal/?link=http://yorkmarriott.co.uk" target="_blank">www.yorkmarriott.co.uk</a>',
+        image: "/system/files/york.jpg",
+        bedrooms: "149",
+        suites: "2",
+        meetings: "11",
+        delegates: "190",
+        airport: "Leeds Bradford (30 miles)",
+        station: "York (1.4 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      }
+    ] //1
+  };
+
+  //Scotland                            Total: 15 +
+  window.scotlandData = {
+    aberdeen: [
+      {
+        title: "ABERDEEN MARRIOTT HOTEL",
+        stars: 4,
+        address: "Overton Circly Dyce, Aberdeen Scotland AB21 7AZ",
+        contactInfo:
+          '+44 (0)1224 770 011 | <a href="app://openExternal/?link=http://aberdeenmarriott.co.uk" target="_top">www.aberdeenmarriott.co.uk</a>',
+        image: "/system/files/aberdeen.jpg",
+        bedrooms: "155",
+        suites: "2",
+        meetings: "7",
+        delegates: "400",
+        airport: "Aberdeen (2.7 miles)",
+        station: "Dyce (1 mile), Aberdeen (6.1 miles)",
+        brand: "marriot",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "COURTYARD ABERDEEN",
+        stars: 4,
+        address:
+          "Argyll Way, Aberdeen Airport, Dyce, Aberdeen Scotland AB21 0AF",
+        contactInfo:
+          '+44(0)1224 432 000 | <a href="app://openExternal/?link=http://courtyardaberdeenairport.co.uk" target="_blank">www.courtyardaberdeenairport.co.uk</a>',
+        image: "/system/files/aberdeen-courtyard.jpg",
+        bedrooms: "194",
+        suites: "n/a",
+        meetings: "1",
+        delegates: "14",
+        airport: "Aberdeen International (0.1 mile)",
+        station: "Dyce (6.5 miles)",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "RESIDENCE INN ABERDEEN",
+        stars: 4,
+        address: "Guestrow, Aberdeen Scotland AB10 1AS",
+        contactInfo:
+          '+44(0)1224 061 190 | <a href="app://openExternal/?link=http://aberdeenresidenceinn.co.uk" target="_blank">www.aberdeenresidenceinn.co.uk</a>',
+        image: "/system/files/aberdeen-residenceinn.jpg",
+        bedrooms: "120",
+        suites: "6",
+        meetings: "n/a",
+        delegates: "n/a",
+        airport: "Aberdeen International (6.5 miles)",
+        station: "Aberdeen (0.4 miles)",
+        brand: "Residence Inn",
+        segment: " "
+      },
+      {
+        title: "MOXY ABERDEEN AIRPORT",
+        stars: 1,
+        address: "Argyll Way Dyce, Aberdeen Scotland AB21 0BY",
+        contactInfo:
+          '+44(0)1224 545 095 | <a href="app://openExternal/?link=#" target="_blank">xxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "XXX",
+        suites: "XXX",
+        meetings: "XXX",
+        delegates: "XXX",
+        airport: "XXX",
+        station: "XXX",
+        brand: "Moxy",
+        segment: " "
+      }
+    ], //4
+
+    edinburg: [
+      {
+        title: "EDINBURGH MARRIOTT HOTEL",
+        stars: 4,
+        address: "111 Glasgow Road, Edinburgh, EH12 8NF",
+        contactInfo:
+          '+44 (0)131 334 9191 | <a href="app://openExternal/?link=http://edinburghmarriott.co.uk" target="_blank">www.edinburghmarriott.co.uk</a>',
+        image: "/system/files/edinburgh.jpg",
+        bedrooms: "241",
+        suites: "4",
+        meetings: "12",
+        delegates: "250",
+        airport: "Edinburgh (2.9 miles)",
+        station: "Edinburgh Park (1.3 miles), Edinburgh Haymarket (3.7 miles)",
+        brand: "marriot",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "RESIDENCE INN EDINBURGH",
+        stars: 4,
+        address: "36 Simpson Loan, Quartermile, Edinburgh, Scotland EH3 9GG",
+        contactInfo:
+          '+44 (0)131 229 7150 | <a href="app://openExternal/?link=http://residenceinnedinburgh.co.uk" target="_blank">www.residenceinnedinburgh.co.uk</a>',
+        image: "/system/files/edinburgh-residenceinn.jpg",
+        bedrooms: "79",
+        suites: "28",
+        meetings: "1",
+        delegates: "10",
+        airport: "Edinburgh (7.5 miles)",
+        station:
+          "Edinburgh Waverley (0.7 miles), Edinburgh Haymarket (1.9 miles)",
+        brand: "Residence Inn",
+        segment: "small-meetings"
+      },
+      {
+        title: "SHERATON GRAND HOTEL & SPA, EDINBURGH",
+        stars: 1,
+        address: "1 Festival Square, Edinburgh, Scotland, EH3 9SR",
+        contactInfo:
+          '+44 (0)013 122 9131 | <a href="app://openExternal/?link=#" target="_blank">xxxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Sheraton Grand",
+        segment: " "
+      },
+      {
+        title: "The Glasshouse, Autograph Collection",
+        stars: 1,
+        address: "2 Greenside Place, Edinburgh EH1 3AN",
+        contactInfo:
+          '+44 (0)131 525 8200 | <a href="app://openExternal/?link=#" target="_blank">xxxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "Courtyard Edinburgh West",
+        stars: 1,
+        address: "2 Research Avenue South, Edinburgh, Scotland EH14 4BA",
+        contactInfo:
+          '+44 (0)131 526 3210 | <a href="app://openExternal/?link=#" target="_blank">xxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "Courtyard Edinburgh",
+        stars: 1,
+        address: "1-3 Baxter’s Place, Edinburgh, Scotland EH1 3AF",
+        contactInfo:
+          '+44 (0)131 526 3778 | <a href="app://openExternal/?link=#" target="_blank">xxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "160",
+        suites: "N/A",
+        meetings: "4",
+        delegates: "90",
+        airport: "Edinburgh Airport 2.7 miles",
+        station:
+          "Edinburgh Haymarket 4.7 miles, Edinburgh Park Station 1.5 miles",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "Moxy Edinburgh Airport",
+        stars: 1,
+        address: "1 Fairview Road, Ingliston, Newbridge EH28 8AP",
+        contactInfo:
+          '+44 (0)131 608 1172 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        segment: " "
+      }
+    ], //7
+
+    glasgow: [
+      {
+        title: "GLASGOW MARRIOTT HOTEL",
+        stars: 4,
+        address: "500 Argyle Street, Glasgow, G3 8RR",
+        contactInfo:
+          '+44 (0) 0141 226 557 | <a href="app://openExternal/?link=http://marriott.com/gladt" target="_blank">www.marriott.com/gladt</a>',
+        image: "/system/files/glasgow.jpg",
+        bedrooms: "300",
+        suites: "2",
+        meetings: "16",
+        delegates: "700",
+        airport: "Glasgow International (9.2 miles)",
+        station:
+          "Anderston (0.1 mile), Glasgow Central (0.4 miles), Queen Street (3.1 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "Courtyard Glasgow Airport",
+        stars: 1,
+        address: "Airport Business Park, Marchburn Drive, Glasgow PA3 2SJ",
+        contactInfo:
+          '+44 (0)141 843 4800 | <a href="app://openExternal/?link=http://marriott.com/gladt" target="_blank">www.xxxxxxx.com</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xxx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xxx",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "Moxy Glasgow Merchant City",
+        stars: 1,
+        address: "210 High Street, Glasgow G4 0QW",
+        contactInfo:
+          '+44 (0)141 846 0256 | <a href="app://openExternal/?link=http://marriott.com/gladt" target="_blank">www.xxxxxxx.com</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xxx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xxx",
+        brand: "Moxy",
+        segment: " "
+      },
+      {
+        title: "Trump Turnberry a Luxury Collection Resort Scotland",
+        stars: 1,
+        address: "Turnberry, Girvan KA26, 9LT",
+        contactInfo:
+          '+44 (0)165 533 3991 | <a href="app://openExternal/?link=http://marriott.com/gladt" target="_blank">xxxxxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xxx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xxx",
+        brand: "Luxury Collection",
+        segment: " "
+      }
+    ] //4
+  };
+
+  // Central England & Midlands         Total: 14 +
+  window.centralEnglandData = {
+    birmingham: [
+      {
+        title: "BIRMINGHAM MARRIOTT HOTEL",
+        stars: 4,
+        address: "12 Hagley Road, Five Ways, Birmingham B16 8SJ",
+        contactInfo:
+          '+44 (0)121 4521144 | <a href="app://openExternal/?link=http://birminghammarriott.co.uk" target="_blank">www.birminghammarriott.co.uk</a>',
+        image: "/system/files/birmingham.jpg",
+        bedrooms: "104",
+        suites: "4",
+        meetings: "6",
+        delegates: "70",
+        airport: "Birmingham (12 miles), East Midlands (41 miles)",
+        station:
+          "Five Ways Station (0.5 miles), Birmingham New Street Station (2.2 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "AC Hotel Birmingham",
+        stars: 1,
+        address: "160 Wharfside Street The Mailbox, Birmingham B1 1RL",
+        contactInfo:
+          '+44 (0)121 643 9344 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "AC Hotels",
+        segment: " "
+      }
+    ], //2
+
+    cheltenham: [
+      {
+        title: "Delta Hotels Cheltenham Gloucester (Opening June 2019)",
+        stars: 1,
+        address: "Shurdington Road, Shurdington, Cheltenham GL51 4XJ",
+        contactInfo:
+          '+44 (0)145 251 9977| <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Delta Hotels",
+        segment: " "
+      }
+    ], //1
+
+    cambridge: [
+      {
+        title: "University Arms Hotel, Autograph Collection",
+        stars: 1,
+        address: "Regent Street, Cambridge CB2 1AD",
+        contactInfo:
+          '+44 (0)122 360 6066 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      }
+    ], //1
+
+    derby: [
+      {
+        title: "BREADSALL PRIORY MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Moor Road, Morley, Derby, DE7 6DL",
+        contactInfo:
+          '+44 (0)1332 836 081 | <a href="app://openExternal/?link=http://www.marriottbreadsallpriory.co.uk/" target="_blank">www.marriottbreadsallpriory.co.uk</a>',
+        image: "/system/files/breadsall-priory.jpg",
+        bedrooms: "112",
+        suites: "8",
+        meetings: "9",
+        delegates: "140",
+        airport:
+          "East Midlands (16.4 miles), Birmingham International (46.6 Miles)",
+        station: "Derby (4.9 Miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    huntingdon: [
+      {
+        title: "HUNTINGDON MARRIOTT HOTEL",
+        stars: 4,
+        address: "Kingfisher Way, Hinchingbrooke, Huntingdon PE29 6FL",
+        contactInfo:
+          '+44 (0)148 044 6000 | <a href="app://openExternal/?link=http://huntingdonmarriott.co.uk/" target="_blank">www.huntingdonmarriott.co.uk</a>',
+        image: "/system/files/huntingdon.jpg",
+        bedrooms: "150",
+        suites: "4",
+        meetings: "8",
+        delegates: "300",
+        airport: "Luton (39.6 miles), Stansted (46.5 miles)",
+        station: "Huntingdon (2 miles), St Neots (11 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    leicester: [
+      {
+        title: "LEICESTER MARRIOTT HOTEL",
+        stars: 4,
+        address: "Smith Way, Grove Park, Leicester LE19 1SW",
+        contactInfo:
+          '+44 (0)116 282 0100 | <a href="app://openExternal/?link=http://leicestermarriott.co.uk" target="_blank">www.leicestermarriott.co.uk</a>',
+        image: "/system/files/leicester.jpg",
+        bedrooms: "227",
+        suites: "1",
+        meetings: "20",
+        delegates: "500",
+        airport: "East Midlands (31.7 miles), Birmingham (52.3 miles)",
+        station: "Leicester (7.6 miles), Narborough (4.3 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    meriden: [
+      {
+        title: "FOREST OF ARDEN MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Maxstoke Lane, Meriden CV7 7HR",
+        contactInfo:
+          '+44 (0)1676 522 335 | <a href="app://openExternal/?link=http://marriottforestofarden.co.uk" target="_blank">www.marriottforestofarden.co.uk</a>',
+        image: "/system/files/forest-of-arden.jpg",
+        bedrooms: "214",
+        suites: "n/a",
+        meetings: "17",
+        delegates: "340",
+        airport: "Birmingham (5 miles)",
+        station:
+          "Birmingham International (5 miles), Hampton in Arden (4 miles)",
+        brand: "H&CC",
+        segment: "golf wedding"
+      }
+    ], //1
+
+    "milton keynes": [
+      {
+        title: "Delta by Marriott Milton Keynes",
+        stars: 1,
+        address: "Timbold drive, Kents Hill Park, Milton Keynes MK7 6HL",
+        contactInfo:
+          '+44 (0)190 869 4433 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "138",
+        suites: "N/A",
+        meetings: "11",
+        delegates: "280",
+        airport: "London Luton Airport 23 miles",
+        station: "Milton Keynes Central Station 4.7 miles",
+        brand: "Delta Hotels",
+        segment: " "
+      }
+    ], //1
+
+    nottingham: [
+      {
+        title: "Delta by Marriott Nottingham",
+        stars: 1,
+        address: "Mellors Way, Off Woodhouse Way, Nottingham NG8 6PY",
+        contactInfo:
+          '+44 (0)115 973 9393 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "110",
+        suites: "10",
+        meetings: "10",
+        delegates: "700",
+        airport: "East Midlands Airport 14.9 miles",
+        station: "Nottingham Railway Station 5.2 miles",
+        brand: "Delta Hotels",
+        segment: " "
+      }
+    ], //1
+
+    northampton: [
+      {
+        title: "NORTHAMPTON MARRIOTT HOTEL",
+        stars: 4,
+        address: "Eagle Drive, Northampton, NN4 7HW",
+        contactInfo:
+          '+44 (0)160 476 8700 | <a href="app://openExternal/?link=http://northamptonmarriott.co.uk" target="_blank">www.northamptonmarriott.co.uk</a>',
+        image: "/system/files/northampton.jpg",
+        bedrooms: "120",
+        suites: "n/a",
+        meetings: "15",
+        delegates: "240",
+        airport: "Luton (37.7 miles), Birmingham (46 miles)",
+        station: "Northampton (3 miles), Wellingborough (12 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      }
+    ], //1
+
+    oxford: [
+      {
+        title: "Courtyard Oxford City Centre (Opening March 2019)",
+        stars: 1,
+        address: "15 Paradise Street, Oxford OX1 1LD",
+        contactInfo:
+          '+44 (0)20 3219 5600 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "140",
+        suites: "xx",
+        meetings: "1",
+        delegates: "N/A",
+        airport: "Heathrow Airport 48.8 miles",
+        station: "Oxford Station 0.5 miles",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "Courtyard Oxford South",
+        stars: 1,
+        address: "6 Milton Gate, Milton, Abingdon OX14 4TX",
+        contactInfo:
+          '+44 (0)186 567 1480 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "170",
+        suites: "xx",
+        meetings: "4",
+        delegates: "120",
+        airport: "Heathrow Airport 56 miles",
+        station: "xx",
+        brand: "Courtyard",
+        segment: " "
+      }
+    ], //2
+
+    peterborough: [
+      {
+        title: "PETERBOROUGH MARRIOTT HOTEL",
+        stars: 4,
+        address: "Lynch Wood, Peterborough, PE2 6GB",
+        contactInfo:
+          '+44 (0)173 337 1111 | <a href="app://openExternal/?link=http://peterboroughmarriott.co.uk" target="_blank">www.peterboroughmarriott.co.uk</a>',
+        image: "/system/files/peterborough.jpg",
+        bedrooms: "163",
+        suites: "2",
+        meetings: "11",
+        delegates: "300",
+        airport: "Stansted (60 miles), Birmingham (72.3 miles)",
+        station: "Peterborough (4. 8 miles), Stamford (11.3 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ] //1
+  };
+
+  // South West England & Wales         Total: 10 +
+  window.southEnglandData = {
+    bournemouth: [
+      {
+        title: "BOURNEMOUTH HIGHCLIFF MARRIOTT HOTEL",
+        stars: 4,
+        address: "St. Michael’s Road, West Cliff Bournemouth, BH2 5DU",
+        contactInfo:
+          '+44 (0)120 255 7702 | <a href="app://openExternal/?link=http://bournemouthhighcliffmarriott.co.uk" target="_blank">www.bournemouthhighcliffmarriott.co.uk</a>',
+        image: "/system/files/bournemouth.jpg",
+        bedrooms: "160",
+        suites: "31",
+        meetings: "12",
+        delegates: "350",
+        airport: "Bournemouth (7.1 miles), Southampton (34.1 miles)",
+        station: "Bournemouth (1 mile)",
+        brand: "marriott",
+        segment: "wedding large-meetings",
+        segment: " "
+      }
+    ], //1
+
+    bristol: [
+      {
+        title: "BRISTOL MARRIOTT HOTEL CITY CENTRE",
+        stars: 4,
+        address: "2 Lower Castle Street, Old Market, Bristol, BS1 3AD",
+        contactInfo:
+          '+44 (0)117 929 4281 | <a href="app://openExternal/?link=http://bristolmarriottcitycentre.co.uk" target="_blank">www.bristolmarriottcitycentre.co.uk</a>',
+        image: "/system/files/bristol.jpg",
+        bedrooms: "300",
+        suites: "1",
+        meetings: "20",
+        delegates: "600",
+        airport: "Bristol Airport (8.8 miles)",
+        station: "Bristol Temple Mead (0.6 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "BRISTOL MARRIOTT ROYAL HOTEL",
+        stars: 4,
+        address: "College Green, Bristol BS1 5TA",
+        contactInfo:
+          '+44 (0)117 925 5100 | <a href="app://openExternal/?link=http://bristolmarriottroyal.co.uk" target="_blank">www.bristolmarriottroyal.co.uk</a>',
+        image: "/system/files/bristol-royal.jpg",
+        bedrooms: "264",
+        suites: "16",
+        meetings: "6",
+        delegates: "300",
+        airport: "Bristol (9.6 miles)",
+        station: "Bristol Temple Meads (1.2 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //2
+
+    cardiff: [
+      {
+        title: "CARDIFF MARRIOTT HOTEL",
+        stars: 4,
+        address: "Mill Lane, Cardiff, CF1 1EZ",
+        contactInfo:
+          '+44 (0)292 039 9944 | <a href="app://openExternal/?link=http://marriott.co.uk/hotels/travel/cwldt-cardiff-marriott-hotel" target="_blank">www.marriott.co.uk</a>',
+        image: "/system/files/cardiff.jpg",
+        bedrooms: "181",
+        suites: "3",
+        meetings: "7",
+        delegates: "400",
+        airport: "Cardiff (14.9 miles), Bristol (51.7 miles)",
+        station: "Cardiff Central (0.6 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    maidstone: [
+      {
+        title: "TUDOR PARK MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "ASHFORD ROAD, BEARSTED, MAIDSTONE, KENT ME14 4NQ",
+        contactInfo:
+          '+44 (0)1622 734 334 | <a href="app://openExternal/?link=http://tudorparkmarriott.co.uk" target="_blank">www.tudorparkmarriott.co.uk</a>',
+        image: "/system/files/tudor-park.jpg",
+        bedrooms: "119",
+        suites: "1",
+        meetings: "12",
+        delegates: "250",
+        airport: "Heathrow (65 miles)",
+        station: "Bearsted (1 mile)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    monmouthshire: [
+      {
+        title: "ST PIERRE MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "St Pierre Park, Chepstow, Monmouthshire NP16 6YA",
+        contactInfo:
+          '+44 (0)1291 635 206 | <a href="app://openExternal/?link=http://marriottstpierre.co.uk" target="_blank">www.marriottstpierre.co.uk</a>',
+        image: "/system/files/st-pierre.jpg",
+        bedrooms: "148",
+        suites: "16",
+        meetings: "11",
+        delegates: "300",
+        airport: "Bristol (29 miles), Cardiff Airport (43 miles)",
+        station: "Seven Tunnel Junction (2.7 miles), Chepstow (3.2 miles)",
+        brand: "H&CC",
+        segment: "golf wedding large-meetings"
+      }
+    ], //1
+
+    lingfield: [
+      {
+        title: "Lingfield Park Marriott Hotel & Country Club",
+        stars: 1,
+        address: "Racecourse Road, Lingfield RH7 6PQ",
+        contactInfo:
+          '+44 (0)134 283 0930 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "H&CC",
+        segment: "golf wedding large-meetings"
+      }
+    ], //1
+
+    portsmouth: [
+      {
+        title: "PORTSMOUTH MARRIOTT HOTEL",
+        stars: 4,
+        address: "Southampton Road, Portsmouth, PO6 4SH",
+        contactInfo:
+          '+44 (0)239 238 3151 | <a href="app://openExternal/?link=http://portsmouthmarriott.co.uk" target="_blank">www.portsmouthmarriott.co.uk</a>',
+        image: "/system/files/portsmouth.jpg",
+        bedrooms: "173",
+        suites: "1",
+        meetings: "11",
+        delegates: "350",
+        airport:
+          "Heathrow (63.1 miles), Southampton (16.6 miles), Gatwick (60.8 miles)",
+        station: "Corsham (1 mile)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    swansea: [
+      {
+        title: "SWANSEA MARRIOTT HOTEL",
+        stars: 4,
+        address: "Maritime Quarter, Swansea, SA1 3SS",
+        contactInfo:
+          '+44 (0)179 264 2020 | <a href="app://openExternal/?link=http://swanseamarriotthotel.co.uk" target="_blank">www.swanseamarriotthotel.co.uk</a>',
+        image: "/system/files/swansea.jpg",
+        bedrooms: "121",
+        suites: "n/a",
+        meetings: "5",
+        delegates: "300",
+        airport: "Cardiff (38.1 miles), Bristol (83.3 miles)",
+        station: "Swansea (1 mile)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      }
+    ], //1
+
+    swindon: [
+      {
+        title: "SWINDON MARRIOTT HOTEL",
+        stars: 4,
+        address: "Pipers Way, Swindon, SN3 1SH",
+        contactInfo:
+          '+44 (0)1793 512 121 | <a href="app://openExternal/?link=http://swindonmarriotthotel.co.uk" target="_blank">www.swindonmarriotthotel.co.uk</a>',
+        image: "/system/files/swindon.jpg",
+        bedrooms: "153",
+        suites: "3",
+        meetings: "9",
+        delegates: "280",
+        airport: "Heathrow (65 miles)",
+        station: "Swindon (3 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      }
+    ] //1
+  };
+
+  // London                             Total: 45 +
+  window.londonData = {
+    centralLondon: [
+      {
+        title: "The London Marriott Hotel County Hall",
+        stars: 5,
+        address: "Westminster Bridge Road, London, SE1 7PB",
+        contactInfo:
+          '+44 (0)20 7928 5200 | <a href="app://openExternal/?link=http://londonmarriottcountyhall.co.uk" target="_blank">www.londonmarriottcountyhall.co.uk</a>',
+        image: "/system/files/county-hall.jpg",
+        bedrooms: "194",
+        suites: "12",
+        meetings: "11",
+        delegates: "100",
+        airport: "London City (8.8 miles), Heathrow (18 miles)",
+        station:
+          "Train: Waterloo (0.4 miles), Victoria (2.2 miles) <br /> Tube: Westminster (0.2 miles) & Waterloo (0.4 miles)",
+        brand: "marriot",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL GROSVENOR SQUARE",
+        stars: 5,
+        address: "Grosvenor Square London, W1K 6JP",
+        contactInfo:
+          '+44 (0)207 74931232 | <a href="app://openExternal/?link=http://londonmarriottgrosvenorsquare.co.uk" target="_blank">www.londonmarriottgrosvenorsquare.co.uk</a>',
+        image: "/system/files/grosvenor-square_1.jpg",
+        bedrooms: "237",
+        suites: "20",
+        meetings: "13",
+        delegates: "1000",
+        airport:
+          "London City (10.8 miles), Heathrow (15.2 miles), Luton (32 miles), Gatwick ( 41.4 miles)",
+        station: "Victoria (1.2 miles), Paddington (1.3 miles) ",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL KENSINGTON",
+        stars: 4,
+        address: "147 Cromwell Road, Kensington, SW5 0TH",
+        contactInfo:
+          '+44 (0)207 973 1000 | <a href="app://openExternal/?link=http://londonmarriottkensington.co.uk" target="_blank">www.londonmarriottkensington.co.uk</a>',
+        image: "/system/files/kensington.jpg",
+        bedrooms: "200",
+        suites: "6",
+        meetings: "9",
+        delegates: "120",
+        airport: "London City (11.9 miles), Heathrow (12 miles)",
+        station:
+          "Train: Kensington Olympia (1.2 miles), Victoria (2.8 miles) <br /> Tube: Earl's Court (0.3 miles), Gloucester Road (0.3 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL MAIDA VALE",
+        stars: 4,
+        address: "Plaza Parade, London, NW6 5RP",
+        contactInfo:
+          '+44 (0)20 7012 7525  | <a href="app://openExternal/?link=http://londonmarriottmaidavale.co.uk" target="_blank">www.londonmarriottmaidavale.co.uk</a>',
+        image: "/system/files/maida-vale.jpg",
+        bedrooms: "237",
+        suites: "11",
+        meetings: "6",
+        delegates: "180",
+        airport:
+          "Heathrow (18 miles), London City (13 miles), Luton (30 miles)",
+        station:
+          "Train: Paddington (2.1 miles) Euston (3.9 miles) <br /> Tube: Kilburn Park (0.3 miles), Maida Vale (0.5 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL MARBLE ARCH",
+        stars: 4,
+        address: "134 George Street, London, W1H 5DN",
+        contactInfo:
+          '+44 (0)207 723 1277 | <a href="app://openExternal/?link=http://londonmarriottmarblearch.co.uk" target="_blank">www.londonmarriottmarblearch.co.uk</a>',
+        image: "/system/files/marble-arch.jpg",
+        bedrooms: "240",
+        suites: "0",
+        meetings: "7",
+        delegates: "170",
+        airport:
+          "London City (11 miles), Heathrow (16 miles), Luton (40 miles), Gatwick (40 miles)",
+        station:
+          "Train: Paddington (0.7 miles), Marylebone (0.6 miles) <br /> Tube: Marble Arch (0.25 miles), Edgware Road (0.3 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL PARK LANE",
+        stars: 5,
+        address: "140 Park Lane, Mayfair, W1K 7AA",
+        contactInfo:
+          '+44 (0)207 493 7000 | <a href="app://openExternal/?link=http://www.londonmarriottparklane.co.uk" target="_blank">www.londonmarriottparklane.co.uk</a>',
+        image: "/system/files/park-lane.jpg",
+        bedrooms: "152",
+        suites: "28",
+        meetings: "3",
+        delegates: "60",
+        airport:
+          "London City (11 miles), Heathrow (18.8 miles), Gatwick (28 miles)",
+        station:
+          "Train: Victoria 1.6 miles), Paddington (1.5 miles) <br /> Tube: Marble Arch (0 miles), Bond Street (0.4 mls), Hyde Park Corner (0.8 mls)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL REGENTS PARK",
+        stars: 4,
+        address: "128 King Henry's Road, London NW3 3ST",
+        contactInfo:
+          '+44 (0)20 7012 7525 | <a href="app://openExternal/?link=http://londonmarriottregentspark.co.uk" target="_blank">www.londonmarriottregentspark.co.uk</a>',
+        image: "/system/files/regents-park.jpg",
+        bedrooms: "311",
+        suites: "7",
+        meetings: "10",
+        delegates: "300",
+        airport: "London City (12 miles), Heathrow (19 miles)",
+        station:
+          "Train: Marylebone (2 miles), Euston ( 2.5 miles) <br /> Tube: Swiss Cottage (0.2 miles), Chalk Farm (0.8 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "ST. PANCRAS RENAISSANCE HOTEL LONDON",
+        stars: 5,
+        address: "Euston Road, London, NW1 2AR ",
+        contactInfo:
+          '+44 (0)207 841 3540 | <a href="app://openExternal/?link=http://www.marriott.com/hotels/travel/lonpr-st.-pancras-renaissance-hotel-london/" target="_blank">www.marriott.com/</a>',
+        image: "/system/files/st-pancras-main.jpg",
+        bedrooms: "245",
+        suites: "38",
+        meetings: "10",
+        delegates: "500",
+        airport: "London City (9.3 miles), Heathrow (17.6 miles)",
+        station:
+          "Train: St. Pancras International, Kings Cross & Euston (0.5 miles) <br /> Tube: Kings Cross St Pancras",
+        brand: "Renaissance",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "JW Marriott Grosvenor House London",
+        stars: 5,
+        address: "86-90 Park Lane, London, W1K 7TN",
+        contactInfo:
+          '+44 (0)207 499 6363 | <a href="app://openExternal/?link=http://londongrosvenorhouse.co.uk" target="_blank">www.londongrosvenorhouse.co.uk</a>',
+        image: "/system/files/grosnevor-house.jpg",
+        bedrooms: "496",
+        suites: "73",
+        meetings: "23",
+        delegates: "2000",
+        airport: "Heathrow (16.7 miles)",
+        station:
+          "Train: Paddington (1.2 miles) , Victoria (1.4 miles) <br /> Tube: Marble Arch, Bond Street (0.2 miles), Hyde Park (1.4 miles)",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL CANARY WHARF",
+        stars: 5,
+        address: "22 Hertsmere Road, Canary Wharf, London, E14 4ED",
+        contactInfo:
+          '+44 (0)207 093 1000 | <a href="app://openExternal/?link=http://londonmarriottwestindiaquay.co.uk" target="_blank">www.LondonMarriottCanaryWharf.co.uk</a>',
+        image: "/system/files/west-india-quay.jpg",
+        bedrooms: "301",
+        suites: "22",
+        meetings: "19",
+        delegates: "290",
+        airport: "London City (1.6 miles), Heathrow (32.6 miles)",
+        station:
+          "Train: Liverpool Street (3 miles), Stratford International (3.7 miles) <br /> Tube: Canary Wharf (0.5 miles), Canada Water (2.8 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "Le Méridien Piccadilly",
+        stars: 1,
+        address: "21 Piccadilly, London W1J 0BH",
+        contactInfo:
+          '+44 (0)20 7734 8000 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Le Meridien",
+        segment: " "
+      },
+      {
+        title: "Aloft London Excel",
+        stars: 1,
+        address: "One Eastern Gateway, Royal Victoria Dock, London E16 1FR",
+        contactInfo:
+          '+44 (0)20 3203 0700 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Aloft",
+        segment: " "
+      },
+      {
+        title: "Sheraton Grand London Park Lane",
+        stars: 1,
+        address:
+          "Sheraton Grand London Park Lane, Piccadilly, Mayfair, London W1J 7BX",
+        contactInfo:
+          '+44 (0)20 7499 6321 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Sheraton Grand",
+        segment: " "
+      },
+      {
+        title: "W London - Leicester Square ",
+        stars: 1,
+        address: "Leicester Square, 10 Wardour Street, London W1D 6QF",
+        contactInfo:
+          '+44 (0)20 7758 1000 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "W",
+        segment: " "
+      },
+      {
+        title: "Hotel Xenia, Autograph Collection",
+        stars: 1,
+        address: "160 Cromwell Road, Kensington, London SW5 0TL",
+        contactInfo:
+          '+44 (0)20 7442 4242 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "St. Ermin's Hotel, Autograph Collection",
+        stars: 1,
+        address: "2 Caxton Street, London SW1H 0QW",
+        contactInfo:
+          '+44 (0)20 7222 7888 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "The Dixon, Tower Bridge, Autograph Collection",
+        stars: 1,
+        address: "211 Tooley Street, London SE1 2JX",
+        contactInfo:
+          '+44 (0)20 3959 2900 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "179",
+        suites: "14",
+        meetings: "2",
+        delegates: "47",
+        airport: "London City Airport 7.3 miles",
+        station: "London Bridge Station 0.4 miles",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "Threadneedles, Autograph Collection",
+        stars: 1,
+        address: "5 Threadneedle Street, London EC2R 8AY",
+        contactInfo:
+          '+44 (0)20 7657 8080 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "Bankside Hotel, Autograph Collection",
+        stars: 1,
+        address: "2 Blackfriars Road, Upper Ground, London SE1 9JU",
+        contactInfo:
+          '+44 (0)20 3319 5988 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Autograph Collection",
+        segment: " "
+      },
+      {
+        title: "Blakes Hotel, London",
+        stars: 1,
+        address: "33 Roland Gardens, Kensington, London SW7 3PF",
+        contactInfo:
+          '+44 (0)20 7370 6701 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Design Hotels",
+        segment: " "
+      },
+      {
+        title: "Town Hall Hotel & Apartments, London",
+        stars: 1,
+        address: "8 Patriot Square, London E2 9NF",
+        contactInfo:
+          '+44 (0)20 7871 0460 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Design Hotels",
+        segment: " "
+      },
+      {
+        title: "The London Edition",
+        stars: 1,
+        address: "10 Berners Street, Fitzrovia, London W1T 3NP",
+        contactInfo:
+          '+44 (0)20 7781 0000 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Edition",
+        segment: " "
+      },
+      {
+        title: "Grand Residences by Marriott - Mayfair - London",
+        stars: 1,
+        address: "47 Park Street, Mayfair, London W1K 7EB",
+        contactInfo:
+          '+44 (0)20 7491 7282 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Grand Residences",
+        segment: " "
+      },
+      {
+        title: "The Wellesley Knightsbridge, a Luxury Collection Hotel, London",
+        stars: 1,
+        address: "11 Knightsbridge, London SW1X 7LY",
+        contactInfo:
+          '+44 (0)20 7235 3535 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Luxury Collection",
+        segment: " "
+      },
+      {
+        title: "The Westbury Mayfair, a Luxury Collection Hotel, London",
+        stars: 1,
+        address: "37 Conduit Street, Mayfair, London W1S 2YF",
+        contactInfo:
+          '+44 (0)20 7629 7755 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Luxury Collection",
+        segment: " "
+      },
+      {
+        title: "The Park Tower Knightsbridge a Luxury Collection Hotel London",
+        stars: 1,
+        address: "101 Knightsbridge, Belgravia, London SW1X 7RN",
+        contactInfo:
+          '+44 (0)20 7235 8050 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Luxury Collection",
+        segment: " "
+      },
+      {
+        title: "Marriott Executive Apartments London, Canary Wharf",
+        stars: 1,
+        address: "22 Hertsmere Road, Canary Wharf, London E14 4ED",
+        contactInfo:
+          '+44 (0)20 7093 1000 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Executive Apartments",
+        segment: " "
+      },
+      {
+        title: "Moxy London Excel",
+        stars: 1,
+        address: "1014 Dockside Road, London E16 2FQ",
+        contactInfo:
+          '+44 (0)20 7031 1683 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Moxy",
+        segment: " "
+      },
+      {
+        title: "Residence Inn London Bridge",
+        stars: 1,
+        address: "201-211 Long Lane, London SE1 4PN",
+        contactInfo:
+          '+44 (0)20 3146 7344 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Residence Inn",
+        segment: " "
+      },
+      {
+        title: "Great Northern Hotel, a Tribute Portfolio Hotel, London",
+        stars: 1,
+        address:
+          "Great Northern Hotel, King's Cross St Pancras International, London N1C 4TB",
+        contactInfo:
+          '+44 (0)20 3388 0800 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Tribute Portfolio",
+        segment: " "
+      }
+    ], //30
+
+    greaterLondon: [
+      {
+        title: "BEXLEYHEATH MARRIOTT HOTEL",
+        stars: 4,
+        address: "1 Broadway, Bexleyheath, Kent DA6 7JZ",
+        contactInfo:
+          '+44 (0)20 8298 1000 | <a href="app://openExternal/?link=http://bexleyheathmarriott.co.uk" target="_blank">www.bexleyheathmarriott.co.uk</a>',
+        image: "/system/files/bexleyheath.jpg",
+        bedrooms: "142",
+        suites: "2",
+        meetings: "8",
+        delegates: "250",
+        airport:
+          "London City (21.7 miles), Heathrow (50.9 miles), Gatwick (53.8 miles)",
+        station: "Bexleyheath (1 mile), Bexley (1.3 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "CHESHUNT MARRIOTT HOTEL",
+        stars: 4,
+        address: "Halfhide Lane, Turnford, Broxbourne EN10 6NG",
+        contactInfo:
+          '+44 (0)199 245 1245 | <a href="app://openExternal/?link=http://cheshuntmarriott.co.uk/" target="_blank">www.cheshuntmarriott.co.uk</a>',
+        image: "/system/files/cheshunt.jpg",
+        bedrooms: "143",
+        suites: "12",
+        meetings: "180",
+        delegates: "180",
+        airport:
+          "London City (22.5 miles), Stansted (25 miles), Luton (26.7 miles)",
+        station: "Cheshunt (2.5 miles), Broxbourne (2.5 miles)",
+        brand: "marriot",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "WALTHAM ABBEY MARRIOTT HOTEL",
+        stars: 4,
+        address: "Old Shire Lane, Waltham Abbey, EN9 3LX",
+        contactInfo:
+          '+44 (0)199 271 7170 | <a href="app://openExternal/?link=http://walthamabbeymarriott.co.uk" target="_blank">www.walthamabbeymarriott.co.uk</a>',
+        image: "/system/files/waltham-abbey.jpg",
+        bedrooms: "162",
+        suites: "4",
+        meetings: "14",
+        delegates: "280",
+        airport:
+          "Stansted (19 miles), London City (19 miles), Luton ( 40 miles)",
+        station:
+          "Train: Waltham Cross (8 miles), Enfield Lock (6 miles) <br /> Tube: Loughton (3 miles), Enfield Lock (4 miles)",
+        brand: "marriott",
+        segment: "wedding small-meetings"
+      },
+      {
+        title: "HANBURY MANOR MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Ware, SG12 0SD",
+        contactInfo:
+          '+44 (0)1920 487722 | <a href="app://openExternal/?link=http://marriotthanburymanor.co.uk/" target="_blank">www.marriotthanburymanor.co.uk</a>',
+        image: "/system/files/hanbury-manor_1.jpg",
+        bedrooms: "161",
+        suites: "12",
+        meetings: "14",
+        delegates: "180",
+        airport: "London Stansted (17.8 miles), London Luton (22.3 miles)",
+        station: "Ware (3.1 miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      },
+      {
+        title: "LONDON HEATHROW MARRIOTT HOTEL",
+        stars: 4,
+        address: "Bath Road, Hayes, UB3 5AN",
+        contactInfo:
+          '+44 (0)208 990 1100 | <a href="app://openExternal/?link=http://londonheathrowmarriott.co.uk" target="_blank">www.londonheathrowmarriott.co.uk</a>',
+        image: "/system/files/heathrow_1.jpg",
+        bedrooms: "393",
+        suites: "2",
+        meetings: "14",
+        delegates: "480",
+        airport: "Heathrow (2 miles)",
+        station:
+          "Train: Hayes & Harlington (2 miles), Heathrow Terminals 123 (3 miles) <br /> Tube: Heathrow Terminals 123 (3 miles), Hatton Cross (4.1 miles)",
+        brand: "marriott",
+        segment: "large-meetings"
+      },
+      {
+        title: "Heathrow/Windsor Marriott Hotel",
+        stars: 4,
+        address: "Ditton Road, Langley, SL3 8PT",
+        contactInfo:
+          '+44 (0)1753 544244 | <a href="app://openExternal/?link=http://HeathrowWindsorMarriott.co.uk" target="_blank">www.HeathrowWindsorMarriott.co.uk</a>',
+        image: "/system/files/windsor.jpg",
+        bedrooms: "382",
+        suites: "7",
+        meetings: "19",
+        delegates: "400",
+        airport: "Heathrow (5.1 miles)",
+        station:
+          "Train: Slough (2 miles), Datchet (1.5 miles) <br /> Tube: Heathrow T5 (4 miles)",
+        brand: "marriott",
+        segment: "wedding large-meetings"
+      },
+      {
+        title: "LONDON MARRIOTT HOTEL TWICKENHAM",
+        stars: 4,
+        address: "189 Whitton Road, Twickenham, TW2 7BA",
+        contactInfo:
+          '+44 (0)20 7012 7525 | <a href="app://openExternal/?link=http://londonmarriottwickenham.com" target="_blank">www.londonmarriotttwickenham.co.uk</a>',
+        image: "/system/files/twickenham.jpg",
+        bedrooms: "156",
+        suites: "12",
+        meetings: "6",
+        delegates: "10",
+        airport: "Heathrow (6 miles)",
+        station: "Twickenham (0.5 miles)",
+        brand: "marriott",
+        segment: "small-meetings"
+      },
+      {
+        title: "Sheraton Heathrow Hotel",
+        stars: 1,
+        address: "Colnbrook Bypass, West Drayton, London UB7 0HJ",
+        contactInfo:
+          '+44 (0)20 8759 2424 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Sheraton",
+        segment: " "
+      },
+      {
+        title: "Sheraton Skyline Hotel London Heathrow",
+        stars: 1,
+        address: "Bath Road (A4), Hayes, Middlesex UB3 5BP",
+        contactInfo:
+          '+44 (0)20 8759 2535 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Sheraton",
+        segment: " "
+      },
+      {
+        title: "Courtyard Luton Airport",
+        stars: 1,
+        address: "Airport Way, Luton LU2 9LF",
+        contactInfo:
+          '+44 (0)158 221 8555 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "Courtyard London Gatwick Airport",
+        stars: 1,
+        address: "London Gatwick Airport, Buckingham Gate, London RH6 0NT",
+        contactInfo:
+          '+44 (0)12 9356 6300 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Courtyard",
+        segment: " "
+      },
+      {
+        title: "The Langley, a Luxury Collection Hotel, Buckinghamshire",
+        stars: 1,
+        address: "Uxbridge Road, Slough SL3 6DU",
+        contactInfo:
+          '+44 (0)20 7236 3636 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Luxury Collection",
+        segment: " "
+      },
+      {
+        title: "Moxy London Heathrow Airport",
+        stars: 1,
+        address: "804-834 Bath Road Heathrow Airport, Hounslow, London TW5 9UH",
+        contactInfo:
+          '+44 (0)20 3318 8100 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Moxy",
+        segment: " "
+      },
+      {
+        title: "Moxy London Stratford",
+        stars: 1,
+        address: "86, Great Eastern Road, London E15 1GR",
+        contactInfo:
+          '+44 (0)20 3608 9864 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Moxy",
+        segment: " "
+      },
+      {
+        title: "Renaissance London Heathrow Hotel",
+        stars: 1,
+        address: "Bath Road, Hounslow, Middlesex TW6 2AQ",
+        contactInfo:
+          '+44 (0)20 8897 6363 | <a href="app://openExternal/?link=#" target="_blank">xxxx</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Renaissance",
+        segment: "wedding"
+      }
+    ] //15
+  };
+
+  // Ireland & Northern Ireland         Total: 6 +
+  window.irelandData = {
+    dublin: [
+      {
+        title: "The Shelbourne Dublin",
+        stars: 1,
+        address:
+          "The Shelbourne Dublin, A Renaissance Hotel, 27 St Stephen’s Green",
+        contactInfo:
+          '+353 (0)353 166 34500 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "x",
+        segment: " "
+      },
+      {
+        title: "The Westin Dublin",
+        stars: 1,
+        address: "at College Green, Westmoreland Street, Dublin DO2 HR67",
+        contactInfo:
+          '+353 (0)1 645 1000 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Westin",
+        segment: " "
+      },
+      {
+        title: "Aloft Dublin City",
+        stars: 1,
+        address: "1 Mill Street, The Liberties, Dublin DO8 XK58",
+        contactInfo:
+          '+353 (0)1 963 1800 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "198",
+        suites: "4",
+        meetings: "1",
+        delegates: "14",
+        airport: "Dublin Airport 7.4 miles",
+        station: "xx",
+        brand: "Aloft",
+        segment: " "
+      }
+    ], //3
+
+    belfast: [
+      {
+        title: "AC Hotel Belfast",
+        stars: 1,
+        address: "Donegall Quay, Belfast Harbour, Belfast BT1 3FE",
+        contactInfo:
+          '+353 (0)289 531 3180 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "AC Hotels",
+        segment: " "
+      }
+    ], //1
+
+    ireland: [
+      {
+        title: "Powerscourt Hotel, Autograph Collection",
+        stars: 1,
+        address: "Powerscourt Estate, Enniskerry, County Wicklow, Ireland",
+        contactInfo:
+          '+353 (0)1 274 8888 | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "102",
+        suites: "92",
+        meetings: "10",
+        delegates: "500",
+        airport: "Dublin Airport 24.2 miles",
+        station: "Bray Train Station 5 miles",
+        brand: "Autograph Collection",
+        segment: " "
+      }
+    ], //1
+
+    athlone: [
+      {
+        title: "Sheraton Athlone Hotel ",
+        stars: 1,
+        address: "Gleeson Street, Co. Westmeath, Athlone Ireland",
+        contactInfo:
+          '+353 (0)90 645 1060  | <a href="app://openExternal/?link=#" target="_blank">www.xxxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg ",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "Sheraton",
+        segment: " "
+      }
+    ] //1
+  };
+
+  //Country club                        Total: 7 +
+  window.countryClubData = {
+    derby: [
+      {
+        title: "BREADSALL PRIORY MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Moor Road, Morley, Derby, DE7 6DL",
+        contactInfo:
+          '+44 (0)1332 836 081 | <a href="app://openExternal/?link=http://www.marriottbreadsallpriory.co.uk/" target="_blank">www.marriottbreadsallpriory.co.uk</a>',
+        image: "/system/files/breadsall-priory.jpg",
+        bedrooms: "112",
+        suites: "8",
+        meetings: "9",
+        delegates: "140",
+        airport:
+          "East Midlands (16.4 miles), Birmingham International (46.6 Miles)",
+        station: "Derby (4.9 Miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    meriden: [
+      {
+        title: "FOREST OF ARDEN MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Maxstoke Lane, Meriden CV7 7HR",
+        contactInfo:
+          '+44 (0)1676 522 335 | <a href="app://openExternal/?link=http://marriottforestofarden.co.uk" target="_blank">www.marriottforestofarden.co.uk</a>',
+        image: "/system/files/forest-of-arden.jpg",
+        bedrooms: "214",
+        suites: "n/a",
+        meetings: "17",
+        delegates: "340",
+        airport: "Birmingham (5 miles)",
+        station:
+          "Birmingham International (5 miles), Hampton in Arden (4 miles)",
+        brand: "H&CC",
+        segment: "golf wedding"
+      }
+    ], //1
+
+    london: [
+      {
+        title: "HANBURY MANOR MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Ware, SG12 0SD",
+        contactInfo:
+          '+44 (0)1920 487722 | <a href="app://openExternal/?link=http://marriotthanburymanor.co.uk/" target="_blank">www.marriotthanburymanor.co.uk</a>',
+        image: "/system/files/hanbury-manor_1.jpg",
+        bedrooms: "161",
+        suites: "12",
+        meetings: "14",
+        delegates: "180",
+        airport: "London Stansted (17.8 miles), London Luton (22.3 miles)",
+        station: "Ware (3.1 miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    worsley: [
+      {
+        title: "WORSLEY PARK MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "Walkden Road, Worsley, Manchester, M28 2QT",
+        contactInfo:
+          '+44 (0)0161 975 2000 | <a href="app://openExternal/?link=http://marriottworsleypark.co.uk/" target="_blank">www.marriottworsleypark.co.uk</a>',
+        image: "/system/files/worsley-park.jpg",
+        bedrooms: "158",
+        suites: "5",
+        meetings: "9",
+        delegates: "250",
+        airport: "Manchester International (12.7 miles)",
+        station: "Manchester Picadilly (8 miles)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    maidstone: [
+      {
+        title: "TUDOR PARK MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "ASHFORD ROAD, BEARSTED, MAIDSTONE, KENT ME14 4NQ",
+        contactInfo:
+          '+44 (0)1622 734 334 | <a href="app://openExternal/?link=http://tudorparkmarriott.co.uk" target="_blank">www.tudorparkmarriott.co.uk</a>',
+        image: "/system/files/tudor-park.jpg",
+        bedrooms: "119",
+        suites: "1",
+        meetings: "12",
+        delegates: "250",
+        airport: "Heathrow (65 miles)",
+        station: "Bearsted (1 mile)",
+        brand: "H&CC",
+        segment: "golf wedding small-meetings"
+      }
+    ], //1
+
+    lingfield: [
+      {
+        title: "Lingfield Park Marriott Hotel & Country Club",
+        stars: 1,
+        address: "Racecourse Road, Lingfield RH7 6PQ",
+        contactInfo:
+          '+44 (0)134 283 0930 | <a href="app://openExternal/?link=#" target="_blank">www.xxxx.co.uk</a>',
+        image: "/system/files/marriott-img-coming-soon.jpg",
+        bedrooms: "xx",
+        suites: "xx",
+        meetings: "xx",
+        delegates: "xx",
+        airport: "xx",
+        station: "xx",
+        brand: "H&CC",
+        segment: "golf wedding large-meetings"
+      }
+    ], //1
+
+    monmouthshire: [
+      {
+        title: "ST PIERRE MARRIOTT HOTEL & COUNTRY CLUB",
+        stars: 4,
+        address: "St Pierre Park, Chepstow, Monmouthshire NP16 6YA",
+        contactInfo:
+          '+44 (0)1291 635 206 | <a href="app://openExternal/?link=http://marriottstpierre.co.uk" target="_blank">www.marriottstpierre.co.uk</a>',
+        image: "/system/files/st-pierre.jpg",
+        bedrooms: "148",
+        suites: "16",
+        meetings: "11",
+        delegates: "300",
+        airport: "Bristol (29 miles), Cardiff Airport (43 miles)",
+        station: "Seven Tunnel Junction (2.7 miles), Chepstow (3.2 miles)",
+        brand: "H&CC",
+        segment: "golf wedding large-meetings"
+      }
+    ] //1
+  };
+
+  window.cityLabelsData = {
+    northEngland: [
+      "fraserburgh",
+      "peterhead",
+      "inverness",
+      "fort william",
+      "montrose",
+      "dundee",
+      "perth",
+      "st andrews",
+      "stirling",
+      "kilmarnock",
+      "prestwick",
+      "dumfries",
+      "stranraer",
+      "carlisle",
+      "sunderland",
+      "darlington",
+      "middlesbrough",
+      "scarborough",
+      "morecambe",
+      "bridlington",
+      "blackpool",
+      "bradford",
+      "hull",
+      "scunthorpe",
+      "grimsby",
+      "lincoln",
+      "sheffield",
+      "bangor",
+      "holyhead",
+      "wrexham",
+      "grantham",
+      "shrewsbury",
+      "wolverhampton",
+      "birmingham"
+    ],
+
+    centralEngland: [
+      "king's linn",
+      "norwich",
+      "great yarmouth",
+      "buryst edmunds",
+      "ipswich",
+      "cambrige",
+      "colchester",
+      "southend-on-sea",
+      "canterbury",
+      "dover",
+      "ashford",
+      "eastboune",
+      "maidstone",
+      "waltham abbey",
+      "cheshunt",
+      "stansted",
+      "ware",
+      "hatingdon",
+      "luton",
+      "lingfield",
+      "brighton",
+      "gatwick",
+      "heathrow",
+      "reading",
+      "swidon",
+      "stratford upon avon",
+      "worcester",
+      "swindon",
+      "bath",
+      "southampton",
+      "portsmouth"
+    ],
+
+    southEngland: [
+      "stratford upon avon",
+      "oxford",
+      "winchester",
+      "southampton",
+      "bournemouth",
+      "bath",
+      "chepstow",
+      "gloucester",
+      "hereford",
+      "abergavenny",
+      "cardiff",
+      "swansea",
+      "carmarthen",
+      "pembroke",
+      "bideford",
+      "exeter",
+      "torquay",
+      "plymouth",
+      "newquay",
+      "st ives",
+      "penzance",
+      "london"
+    ]
+  };
+
+  window.pinTemplate = function() {
+    return [
+      '<a id="{{id}}-pin" onclick="window.clickHandler(this);" class="pin" data-city-label="{{cityLabel}}" data-map-region="{{region}}">',
+      '<i class="material-icons">location_on</i>',
+      // '<img id="pin-icon" src="/system/files/marriott-pins.png"/>',
+      '<span class="hotel-count">{{hotelLength}}</span>',
+      '<span class="city-label">{{label}}</span>',
+      "</a>"
+    ].join("");
+  };
+
+  window.londonPinTemplate = function() {
+    return [
+      '<a  id="{{id}}-pin"onclick="window.clickHandlerLondon(this);" class="pin" data-map-region="{{region}}" data-city-label="{{cityLabel}}">',
+      '<i class="material-icons">location_on</i>',
+      '<span class="hotel-count">{{hotelLength}}</span>',
+      '<span class="city-label">{{label}}</span>',
+      '<span class="tooltip">{{hotelName}}</span>',
+      "</a>"
+    ].join("");
+  };
+
+  window.sliderTemplate = function() {
+    return [
+      '<div class="hotel-block cf">',
+      '<div class="image"><img src="{{image}}" alt=""></div>',
+      '<div class="info">',
+      '<div class="title">{{title}}</div>',
+      '<div class="stars">{{stars}}</div>',
+      '<div class="address">{{address}}</div>',
+      '<div class="contactInfo">{{contactInfo}}</div>',
+      "</div>",
+      '<div class="more-info">',
+      '<div class="row">',
+      '<div class="col col-6">',
+      '<div class="label label-bedrooms">No. Bedrooms</div><div class="value value-bedrooms">{{bedrooms}}</div>',
+      "</div>",
+      '<div class="col col-6">',
+      '<div class="label label-m&e-spaces">No. M&E Spaces</div><div class="value value-m&e-spaces">{{meetings}}</div>',
+      "</div>",
+      "</div>",
+      '<div class="row">',
+      '<div class="col col-6">',
+      '<div class="label label-suites">No. Suites</div><div class="value value-suites">{{suites}}</div>',
+      "</div>",
+      '<div class="col col-6">',
+      '<div class="label label-max-delegate">Max delegate capacity</div><div class="value value-max-delegate">{{delegates}}</div>',
+      "</div>",
+      "</div>",
+      '<div class="row  margin-top">',
+      '<div class="col col-12">',
+      '<div class="label label-airport">Nearest airport</div><div class="value value-airport">{{airport}}</div>',
+      "</div>",
+      '<div class="col col-12">',
+      '<div class="label label-station">Nearest station</div><div class="value value-mstation">{{station}}</div>',
+      "</div>",
+      "</div>",
+      "</div>",
+      "</div>"
+    ].join("");
+  };
+
+  window.cityLabelTemplate = function() {
+    return ['<p class="{{cityLabelID}}__city-label">{{cityLabel}}</p>'].join(
+      ""
+    );
+  };
+
+  window.elements = {
+    innerContainer: function() {
+      return $(".inner-container");
+    },
+    popup: function() {
+      return document.getElementById("popup-container");
+    },
+    popupData: function() {
+      return document.getElementById("popup-data");
+    },
+    closePopupButton: function() {
+      return document.getElementById("close-popup");
+    }
+  };
+
+  window.mapData = {
+    northEngland: northEnglandData,
+    centralEngland: centralEnglandData,
+    southEngland: southEnglandData,
+    scotland: scotlandData,
+    ireland: irelandData,
+    countryClub: countryClubData
+  };
+</script>
